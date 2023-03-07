@@ -17,7 +17,9 @@ export default class RectiveListener {
     }
   }
 
-  render(){}
+  render(type){
+    console.log('type', type)
+  }
 
   load(){
     if(this.state.loaded) return

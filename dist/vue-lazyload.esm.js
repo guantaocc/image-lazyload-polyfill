@@ -195,7 +195,9 @@ class RectiveListener {
       loaded: false
     };
   }
-  render() {}
+  render(type) {
+    console.log('type', type);
+  }
   load() {
     if (this.state.loaded) return;
     // load Image
