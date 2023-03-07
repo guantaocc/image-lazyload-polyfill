@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+
+  </div>
+  <script type="module">
+    import Vue from '../node_modules/vue/dist/vue.esm.browser.js'
+    import Lazyload from '../dist/vue-lazyload.esm.js'
+    Vue.use(Lazyload)
+
+    new Vue({
+      el: app,
+      data: {
+        imageSrc: 'https://t13.baidu.com/it/u=2193412231,157831542&fm=30&app=106&size=f242,150&n=0&f=JPEG&fmt=auto?s=55B687740F42784510EBDDC1030050BB&sec=1678208400&t=f32c9d0c308cb4f27f08295dad30fcc0'
+      },
+      template: `<div class="container">
+        <h1 style="margin-bottom:1000px;">示例代码</h1>
+        <img  v-lazy="imageSrc" />  
+      </div>`
+    })
+  </script>
+</body>
+</html>
